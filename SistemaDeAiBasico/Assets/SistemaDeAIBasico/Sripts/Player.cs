@@ -4,50 +4,56 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public float jumpSpeed = 10f;
-    public float gravity = 20f;
-    private Vector3 moveDirection = Vector3.zero;
+    Transform cam;
+    CharacterController control;
 
-    private CharacterController controller;
-    private Transform playerTransform;
+    public float speedCam;
+    private float camRotation = 0f;
+    public float speed;
+    public float gravityForce;
+    private float gravityMove = 0f;
+    public float jumpForce;
 
-    void Start()
+    private void Start()
     {
-        controller = GetComponent<CharacterController>();
-        playerTransform = transform;
+        cam = transform.GetChild(0).GetComponent<Transform>();
+        control = GetComponent<CharacterController>();
+
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
-    void Update()
+    private void Update()
     {
-        // Movimiento horizontal
-        float hAxis = Input.GetAxis("Horizontal");
-        float vAxis = Input.GetAxis("Vertical");
+        float mouseX = Input.GetAxis("Mouse X");
+        float mouseY = Input.GetAxis("Mouse Y");
 
-        // Calcular la dirección del movimiento del jugador
-        Vector3 moveDirectionHor = new Vector3(hAxis, 0, vAxis);
-        moveDirectionHor = moveDirectionHor.normalized * moveSpeed;
+        transform.Rotate(new Vector3(0, mouseX, 0) * speedCam * Time.deltaTime);
 
-        // Movimiento vertical (salto)
-        if (controller.isGrounded && Input.GetKeyDown(KeyCode.Space))
+        camRotation -= mouseY * speedCam * Time.deltaTime;
+        camRotation = Mathf.Clamp(camRotation, -90, 90);
+        cam.localRotation = Quaternion.Euler(new Vector3(camRotation, 0, 0));
+
+        float moveX = Input.GetAxis("Horizontal");
+        float moveZ = Input.GetAxis("Vertical");
+
+        Vector3 movement = (transform.right * moveX + transform.forward * moveZ) * speed * Time.deltaTime;
+
+        control.Move(movement);
+
+        control.Move(new Vector3(0, gravityMove, 0) * Time.deltaTime);
+
+        if(!control.isGrounded)
         {
-            moveDirection.y = jumpSpeed;
+            gravityMove += gravityForce;
+        }
+        else
+        {
+            gravityMove = 0f;
         }
 
-        // Aplicar la gravedad
-        moveDirection.y -= gravity * Time.deltaTime;
-
-        // Sumar los movimientos horizontal y vertical
-        moveDirection.x = moveDirectionHor.x;
-        moveDirection.z = moveDirectionHor.z;
-
-        // Mover al personaje
-        controller.Move(moveDirection * Time.deltaTime);
-
-        // Rotar al personaje hacia la dirección de movimiento
-        if (moveDirectionHor.magnitude > 0.01f)
+        if(Input.GetKeyDown(KeyCode.Space) && control.isGrounded)
         {
-            playerTransform.rotation = Quaternion.Slerp(playerTransform.rotation,Quaternion.LookRotation(moveDirectionHor),Time.deltaTime * 10f);
+            gravityMove = jumpForce;
         }
     }
 }
