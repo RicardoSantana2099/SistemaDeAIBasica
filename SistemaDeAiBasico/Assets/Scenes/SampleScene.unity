@@ -241,6 +241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedCam: 500
   speed: 5
+  sprintSpeed: 10
   gravityForce: -0.5
   jumpForce: 50
 --- !u!1001 &77517750

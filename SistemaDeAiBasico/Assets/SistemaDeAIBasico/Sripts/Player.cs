@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public float speedCam;
     private float camRotation = 0f;
     public float speed;
+    public float sprintSpeed;
     public float gravityForce;
     private float gravityMove = 0f;
     public float jumpForce;
@@ -36,9 +37,18 @@ public class Player : MonoBehaviour
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
 
-        Vector3 movement = (transform.right * moveX + transform.forward * moveZ) * speed * Time.deltaTime;
+        Vector3 movement = Vector3.zero;
 
-        control.Move(movement);
+        if (Input.GetKey(KeyCode.LeftShift) && (moveX != 0 || moveZ != 0))
+        {
+            movement = (transform.right * moveX + transform.forward * moveZ) * sprintSpeed * Time.deltaTime;
+        }
+        else
+        {
+            movement = (transform.right * moveX + transform.forward * moveZ) * speed * Time.deltaTime;
+        }
+
+            control.Move(movement);
 
         control.Move(new Vector3(0, gravityMove, 0) * Time.deltaTime);
 
