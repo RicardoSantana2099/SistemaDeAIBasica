@@ -6,29 +6,15 @@ using UnityEngine.AI;
 public class EnemigoAI : MonoBehaviour
 {
     public Transform objetivo;
-    public float velocidad;
-    public float alturaSalto = 2f;
-    public float fuerzaSalto = 5f;
-    public NavMeshAgent IA;
-    private bool enSuelo;
+    private NavMeshAgent agente;
 
-    void Update()
+    private void Start()
     {
-        IA.speed = velocidad;
-        IA.SetDestination(objetivo.position);
-
-        if (enSuelo && Input.GetKeyDown(KeyCode.Space))
-        {
-            enSuelo = false;
-            IA.velocity += Vector3.up * Mathf.Sqrt(alturaSalto * -2f * Physics.gravity.y * fuerzaSalto);
-        }
+        agente = GetComponent<NavMeshAgent>();
     }
 
-    void OnCollisionEnter(Collision collision)
+    private void Update()
     {
-        if (collision.gameObject.CompareTag("Suelo"))
-        {
-            enSuelo = true;
-        }
+        agente.destination = objetivo.position;
     }
 }
