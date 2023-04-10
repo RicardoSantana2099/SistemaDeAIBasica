@@ -41,9 +41,13 @@ Este juego tiene como objetivo mostrar el sistema de AI basica de manera sencill
 
 # Acerca del Juego
 
-Bienvenido al mercado del pueblo, compra todo lo que puedas.
+Bienvenido a la base de observación de bosque, una zona donde los cientificos vas a analizar la zona.
+Pero algo sucedio, los arboles comenzaron a desaparecer en la zona y cosas raras comenzaron a pasar
+obligando a todos a irse.
+Las malas lenguas dicen que son fantasmas atormentados.
+El problema es que dejaron todos los registros en el laboratorio, dentro de frascos con forma de capsula, tu objetivo
+es conseguir todos los frascos y no dejes que te toquen esos fantasma.
 
-El juego esta creado en un pequeño pueblo donde hay gente vendiendo cosas.
 
 # Este juego incluye:
 
