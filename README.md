@@ -69,6 +69,8 @@ es conseguir todos los frascos y no dejes que te toquen esos fantasma.
 
 4 Audios
 
+1 Pildora roja.
+
 # Lo quieres jugar y ver que se puede hacer? Entra a esta carpeta
 
 SistemaDeAIBasica/SistemaDeAiBasico/Juego/
