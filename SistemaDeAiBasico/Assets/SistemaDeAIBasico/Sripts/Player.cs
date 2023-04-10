@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using TMPro;
+
 public class Player : MonoBehaviour
 {
     Transform cam;
@@ -14,6 +16,10 @@ public class Player : MonoBehaviour
     public float gravityForce;
     private float gravityMove = 0f;
     public float jumpForce;
+
+    public TextMeshProUGUI countText;
+    private int count = 0;
+    public GameObject WinText;
 
     public AudioSource pasos;
     private bool HActivo;
@@ -107,6 +113,29 @@ public class Player : MonoBehaviour
             }
             
         }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+
+
+        if (other.gameObject.CompareTag("punto"))
+        {
+            count++;
+            SetCountText();
+            other.gameObject.SetActive(false);
+            if (count == 113)
+            {
+                WinText.SetActive(true);
+            }
+        }
+
+    }
+
+    void SetCountText()
+    {
+        countText.text = "Count: " + count.ToString();
+        
     }
 }
 
