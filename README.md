@@ -2,16 +2,19 @@
 Este repositorio esta encargado de almacenar la practica de sistema de AI basica para la clase de programación del grupo 5-A.
 
 
-Este juego tiene como objetivo mostrar el sistema de AI basica de manera sencilla y pueda.
+Este juego tiene como objetivo mostrar el sistema de AI basica de manera sencilla.
 
 
-# Contiene 5 scripts:
-1. Plantilla objeto (este se encarga de definir las caracteristicas de cada uno de 
-nuestros objetos en nuestra tienda)
-2. Objeto (Este es el encargado de gestionar los elementos que se pasan del objeto scriptable al prefab)
-3. Tienda (va a gestionar la aparición de objetos aleatorios)
-4. Equipo (Va a gestionar la cantidad de dinero y transferir los items)
-5. Movimiento (Al fondo hay NPC que se mueven solos)
+# Contiene 9 scripts:
+1. Player (Este es el encargado del funcionamiento del player y pueda interactuar en el mundo)
+2. EnemigoAI(Este es el encargado de contener la información de la ia)
+3. MenuInicial(El juego tiene un menu principal y este script se encarga de su funcionamiento)
+4. Pausa(Cuando el jugador quiera detener el juego solo tendra que presionar escape)
+5. Puntos(En el suelo hay puntos que rotan en su eje)
+6. FantasmaBlack(Cuando el fantasma negro te toque, perderas automaticamente)
+7. FantasmaYellow(Si este fantasma te toca 2 veces, perderas automaticamente)
+8. FantasmaRed(Si este fantasma te toca 5 veces, perderas automaticamente)
+9. Intro(En el menu inicial, un fantasma va a pasar de fondo volando)
 
 # Descarga:
 1. Ingrese al link: https://github.com/RicardoSantana2099/SistemaDeEconomia-5A
