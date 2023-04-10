@@ -37,7 +37,7 @@ Este juego tiene como objetivo mostrar el sistema de AI basica de manera sencill
    -El fantasma rojo es el mas rapido por lo cual si te toca 5 veces perdiste.
    
 6. El mapa esta oscuro por lo cual tendras una linterna para poder moverte con mas facilidad.
-7. Existe un area que los fantasmas evitaran, por lo cual podras descansar ahi, pero no te confies porque ellos estaran al asecho.
+7. Existe un area que los fantasmas evitaran, por lo cual podras descansar ahi (el area es la unica zona con iluminación), pero no te confies porque ellos estaran al asecho.
 
 # Acerca del Juego
 
