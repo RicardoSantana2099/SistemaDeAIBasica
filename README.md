@@ -17,7 +17,7 @@ Este juego tiene como objetivo mostrar el sistema de AI basica de manera sencill
 9. Intro(En el menu inicial, un fantasma va a pasar de fondo volando)
 
 # Descarga:
-1. Ingrese al link: [https://github.com/RicardoSantana2099/SistemaDeEconomia-5A](https://github.com/RicardoSantana2099/SistemaDeAIBasica)
+1. Ingrese al link: [https://github.com/RicardoSantana2099/SistemaDeAIBasica]
 2. Da click en el botón verde con el titulo “Code” y descárgalo en “Donlwoad Zip”
 3. Una vez descargado el documento lo vas a extraer en tu pc.
 4. Importa el paquete a tu proyecto.
