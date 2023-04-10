@@ -24,10 +24,16 @@ Este juego tiene como objetivo mostrar el sistema de AI basica de manera sencill
 
 
 # Como Jugar
-1. Tienes una cantidad de dinero limitada.
-2. Presiona sobre el item que quieras.
-3. Recuerda tener suficiente dinero para comprarlo.
-4. El limite es la cantidad de items que entre en el equipo.
+1. Para moverte presiona las teclas A,S,D,W.
+2. Presiona la tecla Shift para correr.
+3. Toma todos los puntos colocados en el mapa para ganar.
+4. No dejes que te toque los fantasmas o perderas.
+5. Cada fantasma tiene una velocidad distinta
+   -El fantasma negro: Es lento pero si te toca una vez perdiste.
+   -El fantasma amarillo tiene una velocidad promedio, pero si te toca 2 veces perdiste.
+   -El fantasma rojo es el mas rapido por lo cual si te toca 5 veces perdiste.
+6. El mapa esta oscuro por lo cual tendras una linterna para poder moverte con mas facilidad.
+7. Existe un area que los fantasmas evitaran, por lo cual podras descansar ahi, pero no te confies porque ellos estaran al asecho.
 
 # Acerca del Juego
 
