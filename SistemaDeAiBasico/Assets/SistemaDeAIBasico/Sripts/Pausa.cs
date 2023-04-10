@@ -40,16 +40,4 @@ public class Pausa : MonoBehaviour
         menuPausa.SetActive(false);
 
     }
-
-    public void Rreiniciar()
-    {
-        juegoPausado = false;
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
-    public void cerrar()
-    {
-        Application.Quit();
-    }
 }
