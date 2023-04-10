@@ -37,7 +37,7 @@ Este juego tiene como objetivo mostrar el sistema de AI basica de manera sencill
    -El fantasma rojo es el mas rapido por lo cual si te toca 5 veces perdiste.
    
 6. El mapa esta oscuro por lo cual tendras una linterna para poder moverte con mas facilidad.
-7. Existe un area que los fantasmas evitaran, por lo cual podras descansar ahi, pero no te confies porque ellos estaran al asecho.
+7. Existe un area que los fantasmas evitaran, por lo cual podras descansar ahi (el area es la unica zona con iluminación), pero no te confies porque ellos estaran al asecho.
 
 # Acerca del Juego
 
@@ -76,7 +76,8 @@ SistemaDeEconomia-5A/Mercado/Juego
 
 # Como sirve el codigo? Encuentra mayor explicación en la carpeta documentación que se encuentra en: 
 
-[5A-SistemaDeDialogos/Assets/SistemaDeDialogo/Documentación](https://github.com/RicardoSantana2099/SistemaDeEconomia-5A/tree/main/Mercado/Assets/SistemaDeEconomia/Documentaci%C3%B3)
+
+[SistemaDeAIBasica/SistemaDeAiBasico/Assets/SistemaDeAIBasico/Documentación](https://github.com/RicardoSantana2099/SistemaDeAIBasica/tree/main/SistemaDeAiBasico/Assets/SistemaDeAIBasico/Documentaci%C3%B3n)
 
 
 # Contacto:
