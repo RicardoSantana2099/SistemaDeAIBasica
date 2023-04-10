@@ -15,7 +15,7 @@ public class FantasmaYellow : MonoBehaviour
 
             if (tocadoCount >= 2) // Comprueba si se ha tocado el objeto dos veces o más
             {
-                SceneManager.LoadScene(0); // Carga la siguiente escena (índice 1)
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
     }

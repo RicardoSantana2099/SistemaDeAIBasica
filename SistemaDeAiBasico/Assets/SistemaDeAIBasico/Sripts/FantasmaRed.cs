@@ -15,7 +15,7 @@ public class FantasmaRed : MonoBehaviour
 
             if (tocadoCount >= 5) // Comprueba si se ha tocado el objeto cinco veces o más
             {
-                SceneManager.LoadScene(0); // Carga la siguiente escena (índice 1)
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
     }
