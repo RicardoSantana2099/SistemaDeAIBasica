@@ -71,8 +71,7 @@ es conseguir todos los frascos y no dejes que te toquen esos fantasma.
 
 # Lo quieres jugar y ver que se puede hacer? Entra a esta carpeta
 
-SistemaDeEconomia-5A/Mercado/Juego
-
+SistemaDeAIBasica/SistemaDeAiBasico/Juego/
 
 # Como sirve el codigo? Encuentra mayor explicación en la carpeta documentación que se encuentra en: 
 
