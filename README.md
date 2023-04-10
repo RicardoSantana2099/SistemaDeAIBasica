@@ -44,24 +44,30 @@ Este juego tiene como objetivo mostrar el sistema de AI basica de manera sencill
 Bienvenido a la base de observación de bosque, una zona donde los cientificos vas a analizar la zona.
 Pero algo sucedio, los arboles comenzaron a desaparecer en la zona y cosas raras comenzaron a pasar
 obligando a todos a irse.
+
 Las malas lenguas dicen que son fantasmas atormentados.
+
 El problema es que dejaron todos los registros en el laboratorio, dentro de frascos con forma de capsula, tu objetivo
 es conseguir todos los frascos y no dejes que te toquen esos fantasma.
 
 
 # Este juego incluye:
 
-1 Valla.
+3 Fantasmas.
 
-6 NPC.
+1 Skybox.
 
 1 Suelo.
 
-1 Carrito de comida.
+7 Tipos de corredores.
 
-1 Panel.
+4 Tipos de puerta.
 
-5 Prendas
+2 Materiales (Para el suelo y las capsulas)
+
+9 Scripts
+
+4 Audios
 
 # Lo quieres jugar y ver que se puede hacer? Entra a esta carpeta
 
