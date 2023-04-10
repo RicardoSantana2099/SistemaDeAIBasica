@@ -15,6 +15,10 @@ public class Player : MonoBehaviour
     private float gravityMove = 0f;
     public float jumpForce;
 
+    public AudioSource pasos;
+    private bool HActivo;
+    private bool VActivo;
+
     private void Start()
     {
         cam = transform.GetChild(0).GetComponent<Transform>();
@@ -64,6 +68,44 @@ public class Player : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space) && control.isGrounded)
         {
             gravityMove = jumpForce;
+        }
+
+        if(Input.GetButtonDown("Horizontal")) //Reproduce audio de pisadas
+        {
+            if(VActivo == false)
+            {
+                HActivo = true;
+                pasos.Play();
+            }
+            
+        }
+        if(Input.GetButtonDown("Vertical"))
+        {
+            if(HActivo == false)
+            {
+                VActivo = true;
+                pasos.Play();
+            }
+            
+        }
+
+        if(Input.GetButtonUp("Horizontal"))
+        {
+            HActivo = false;
+            if(VActivo == false)
+            {
+                pasos.Pause();
+            }
+            
+        }
+        if (Input.GetButtonUp("Vertical"))
+        {
+            VActivo = false;
+            if(HActivo == false)
+            {
+                pasos.Pause();
+            }
+            
         }
     }
 }
