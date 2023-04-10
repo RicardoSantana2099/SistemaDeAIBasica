@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class Player : MonoBehaviour
@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
 
     public TextMeshProUGUI countText;
     private int count = 0;
+    private int dead = 0;
     public GameObject WinText;
 
     public AudioSource pasos;
@@ -122,7 +123,7 @@ public class Player : MonoBehaviour
         if (other.gameObject.CompareTag("punto"))
         {
             count++;
-            SetCountText();
+            
             other.gameObject.SetActive(false);
             if (count == 113)
             {
@@ -132,10 +133,5 @@ public class Player : MonoBehaviour
 
     }
 
-    void SetCountText()
-    {
-        countText.text = "Count: " + count.ToString();
-        
-    }
 }
 
