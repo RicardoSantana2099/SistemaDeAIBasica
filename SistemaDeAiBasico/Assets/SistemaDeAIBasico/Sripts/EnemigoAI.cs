@@ -11,10 +11,12 @@ public class EnemigoAI : MonoBehaviour
     private void Start()
     {
         agente = GetComponent<NavMeshAgent>();
+        
     }
 
     private void Update()
     {
         agente.destination = objetivo.position;
+
     }
 }
